@@ -26,7 +26,15 @@ def solve(grid, row, col):
             return solve(grid, row, col + 1)
 
         for i in range(1, 10):
-
+            
+        
+            print("--------------------")
+            for x in range(9):
+                for d in range(9):
+                    print(grid[x][d], end=" ")
+                    
+                print()
+            print("--------------------")
             if is_valid_move(grid, row, col, i):
                 grid[row][col] = i
                 if solve(grid, row, col + 1):
